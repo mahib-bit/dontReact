@@ -1,15 +1,33 @@
 import './App.css'
 import ToDo from './Todo';
+import Actor from './Actor';
+import Bands from './Bands';
 
 function App() {
 
-  const time = 50;
+  // const actors = ['Brad Pitt', 'Leonardo DiCaprio', 'Scarlett Johansson'];
+
+  const bands = [
+    {name: "Tame Impala", genre: "Psychedelic Rock", members: 1},
+    {name: "Cigarettes After Sex", genre: "Dream Pop", members: 4},
+    {name: "The Smiths", genre: "Alternative Rock", members: 4}
+  ]
+
+  // const time = 50;
 
   return (
     <>
       <h1>React Core Concepts</h1>
 
-      <ToDo name="Buy groceries" isDone={true} time={time} />
+      {
+        bands.map(band => <Bands key={band.name} name={band.name} genre={band.genre} members={band.members} />)
+      }
+
+      {/* {
+        actors.map(actors => <Actor name={actors} />)
+      } */}
+
+      {/* <ToDo name="Buy groceries" isDone={true} time={time} />
       <ToDo name="Walk the dog" isDone={false}  time={time}/>
       <ToDo name="Read a book" isDone={true} />
       <ToDo name="Buy a bottle of milk" isDone={false} />
@@ -21,7 +39,7 @@ function App() {
       <Student name="Bob" />    
       <Flower color="purple" number={5} />
       <Flower color="green" number={3} />
-      <Salami taka={1000} /> 
+      <Salami taka={1000} />  */}
     </>
   )
 }

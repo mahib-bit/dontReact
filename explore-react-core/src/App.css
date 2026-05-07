@@ -183,7 +183,9 @@
   }
 }
 
-.student{
+.student, .band{
+  color: black;
+  font-weight: 500;
   margin: 20px;
   padding: 20px;
   border-radius: 20px;

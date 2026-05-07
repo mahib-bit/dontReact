@@ -1,8 +1,8 @@
 const person = {
     name: "hero alom",
     age: 10,
-    frineds: ["korim"],
-    salry: 100,
+    friends: ["korim"],
+    salary: 100,
     10: "secret code",
     "hero-boss": "sdfds"
 }
