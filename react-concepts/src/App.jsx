@@ -1,5 +1,11 @@
+import { Suspense } from 'react'
 import './App.css'
 import Counter from './Counter'
+import Score from './Score'
+import Users from './Users'
+
+const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
 
 function App() {
 
@@ -17,6 +23,11 @@ const handleClick3 = () => {
       
           <h1>Get started</h1>
 
+          <Suspense fallback={<h2>Loading...</h2>}>
+            <Users fetchUsers={fetchUsers} />
+          </Suspense>
+
+          <Score />
           <Counter />
 
           <button onClick={handleClick}>Click Me</button>
