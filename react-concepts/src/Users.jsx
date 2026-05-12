@@ -3,7 +3,7 @@ import { use } from "react";
 export default function Users({ fetchUsers }) {
     const users = use(fetchUsers);
     return (
-        <div>
+        <div className="hook">
             <h2>Users</h2>
             <ul>
             {users.map(user => (
